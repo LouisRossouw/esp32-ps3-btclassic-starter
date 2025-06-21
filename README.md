@@ -27,4 +27,4 @@
 No pio cli ? No problemo.
 
 - Add the scripts directory to your system environment variables, somepath/platformio/penv/Scripts
-- on Windows it would be - C:\Users\[user-user]\.platformio\penv\Scripts
+- on Windows it would be - C:\Users\[your-user]\.platformio\penv\Scripts
