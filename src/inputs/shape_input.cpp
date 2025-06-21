@@ -12,7 +12,6 @@ void shapeButtonsInputs()
     //--- Digital cross/square/triangle/circle button events ---
     if (btnDown.cross)
     {
-        lamp.toggle();
         dev.log("Started pressing the cross button");
     }
 
@@ -23,12 +22,10 @@ void shapeButtonsInputs()
 
     if (btnDown.square)
     {
-        lamp.turnOn();
         dev.log("Started pressing the square button");
     }
     if (btnUp.square)
     {
-        lamp.turnOff();
         dev.log("Released the square button");
     }
 

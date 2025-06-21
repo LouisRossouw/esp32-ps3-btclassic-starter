@@ -4,7 +4,6 @@
 #include <Ps3Controller.h>
 
 #include <dev.h>
-#include <lamp.h>
 
 using namespace std;
 
@@ -12,7 +11,6 @@ int player = 1;
 const char *controller = "78:18:81:57:05:fd";
 
 Dev dev();
-Lamp lamp(12);
 
 void notify()
 {
@@ -45,9 +43,6 @@ void setup()
   Ps3.begin(controller);
 
   Serial.println("Ready.");
-
-  // class
-  lamp.begin();
 }
 
 void loop()
