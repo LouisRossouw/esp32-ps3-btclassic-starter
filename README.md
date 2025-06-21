@@ -10,11 +10,11 @@
 
 - in platformio.ini change to a different board, platform, framework. or use Platformio UI.
 
-## To build to ESP32: 
+## To build to ESP32:
 
 - connect esp32.
 
-if terminal:
+  in terminal:
 
 - pio run (to build)
 - pio --target upload (to upload to the board, depending on board, you might need to hold down the boot button for this upload process.)
@@ -26,5 +26,5 @@ if terminal:
 
 No pio cli?
 
-- Add the scripts to your environment variables, somepath/platformio/penv/Scripts 
+- Add the scripts to your environment variables, somepath/platformio/penv/Scripts
 - on Windows it would be - C:\Users\[user-user]\.platformio\penv\Scripts
