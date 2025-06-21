@@ -18,7 +18,7 @@
 
 - pio run (to build)
 - pio --target upload (to upload to the board, depending on board, you might need to hold down the boot button for this upload process.)
-- Push the reset button.
+- Push the reset button if needed.
 
 - pio device (To view serial output)
 
@@ -31,4 +31,4 @@ No pio cli ? No problemo.
 
 ## To print the button outputs:
 
-- On the PS3 controller, press select and start at the same time to activate serial print. alternatively, in dev the class change the global bool state to default to true.
+- On the PS3 controller, press select and start at the same time to activate serial print. alternatively, in the dev.cpp class change the global bool state to default to true.
