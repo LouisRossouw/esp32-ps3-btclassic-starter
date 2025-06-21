@@ -29,6 +29,6 @@ No pio cli ? No problemo.
 - Add the scripts directory to your system environment variables, somepath/platformio/penv/Scripts
 - on Windows it would be - C:\Users\[your-user]\.platformio\penv\Scripts
 
-## To print the button outputs
+## To print the button outputs:
 
 - On the PS3 controller, press select and start at the same time to activate serial print. alternatively, in dev the class change the global bool state to default to true.
