@@ -1,18 +1,68 @@
-#include <Arduino.h>
 
-// put function declarations here:
-int myFunction(int, int);
+#include <inputs.h>
+#include <events.h>
+#include <Ps3Controller.h>
 
-void setup() {
-  // put your setup code here, to run once:
-  int result = myFunction(2, 3);
+#include <dev.h>
+#include <lamp.h>
+
+using namespace std;
+
+int player = 1;
+const char *controller = "78:18:81:57:05:fd";
+
+Dev dev();
+Lamp lamp(12);
+
+void notify()
+{
+
+  // Inputs
+  shapeButtonsInputs();
+  dPadButtonsInputs();
+  shoulderButtonsInputs();
+  triggerButtonsInputs();
+  stickButtonsInputs();
+  startButtonsInputs();
+  analogStickButtonsInputs();
+
+  // Events
+  batteryEvents();
 }
 
-void loop() {
-  // put your main code here, to run repeatedly:
+void onConnect()
+{
+  Serial.println("Connected.");
 }
 
-// put function definitions here:
-int myFunction(int x, int y) {
-  return x + y;
+void setup()
+{
+
+  Serial.begin(9600);
+
+  Ps3.attach(notify);
+  Ps3.attachOnConnect(onConnect);
+  Ps3.begin(controller);
+
+  Serial.println("Ready.");
+
+  // class
+  lamp.begin();
+}
+
+void loop()
+{
+  if (!Ps3.isConnected())
+  {
+    return;
+  }
+
+  //-------------------- Player LEDs -------------------
+  Serial.print("Setting LEDs to player ");
+  Serial.println(player, DEC);
+  Ps3.setPlayer(player);
+
+  // player = (player + 1) % 11;  // roll over after 10
+
+  delay(2000);
 }
