@@ -1,7 +1,7 @@
 # ESP32 PS3 Bluetooth classic starter
 
 - This is a quick starter repo to do my prototyping with the PS3 controller. (I dont know c++, but here we are 😄, learning)
-- It is configured to use platformio, and bluetooth classic for esp32.
+- It is configured to use platformio, and bluetooth classic for esp32 using jvpernis/PS3 Controller Host library.
 
 ## Quick start:
 
@@ -32,3 +32,7 @@ No pio cli ? No problemo.
 ## To print the button outputs:
 
 - On the PS3 controller, press select and start at the same time to activate serial print. alternatively, in the dev.cpp class change the global bool state to default to true.
+
+## Not compiling?
+
+- Might have to delete previous project cache or package downloads in platformio core directory.
